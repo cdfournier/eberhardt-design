@@ -1,0 +1,30 @@
+// BUTTONS
+button, .button {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 1rem 1.75rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  @include font-bold;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  white-space: nowrap;
+  cursor: pointer;
+  @include transition(all, 0.325s, ease, 0s);
+}
+
+button:hover, button:focus,
+.button:hover, .button:focus {
+  color: black;
+  background-color: transparent;
+}
