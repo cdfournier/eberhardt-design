@@ -1,21 +1,13 @@
 @font-face {
-  font-family: "bau-regular";
-  src: url("../fonts/bau-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bau-regular.woff") format("woff"), url("../fonts/bau-regular.ttf") format("truetype"), url("../fonts/bau-regular.svg#bau-regular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: "interstate-bold";
   src: url("../fonts/interstate-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/interstate-bold.woff") format("woff"), url("../fonts/interstate-bold.ttf") format("truetype"), url("../fonts/interstate-bold.svg#interstate-bold") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 /*
-@mixin font-bold {
-  font-family: $font-body;
-  font-style: normal;
-  font-weight: $font-bold;
-}
+$font-body: ("Montserrat", sans-serif);
+$font-regular: 400;
+$font-bold: 700;
 */
 * {
   -webkit-box-sizing: border-box;
@@ -28,8 +20,8 @@ html {
   height: 100%;
   margin: 0 auto;
   padding: 0;
-  font-family: "bau-regular";
-  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-size: 100%;
@@ -98,8 +90,8 @@ p {
   line-height: 1.5; }
 
 strong, em, b {
-  font-family: "interstate-bold";
-  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   font-style: normal; }
 
 small {
@@ -116,8 +108,8 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
   display: none; }
 
 a {
-  font-family: "interstate-bold";
-  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   font-style: normal;
   text-decoration: none;
   color: black;
@@ -136,17 +128,19 @@ a.arrow {
   align-items: center;
   width: fit-content;
   margin: 1rem 0 0;
-  font-family: "interstate-bold";
-  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   font-style: normal;
   line-height: 1;
   text-decoration: none;
   color: inherit; }
   a.arrow span {
     display: block;
-    width: 1.5rem;
-    height: 1.5rem; }
+    width: 1.25rem;
+    height: 1.25rem; }
     a.arrow span svg {
+      width: 100%;
+      height: 100%;
       margin: 0 0 0 0.25rem;
       -webkit-transition: all 0.325s ease 0s;
       -moz-transition: all 0.325s ease 0s;
@@ -267,6 +261,8 @@ footer {
     .work .project figure {
       width: 50%;
       margin: 0 auto; }
+      .work .project figure picture {
+        display: block; }
     .work .project .overlay {
       display: block;
       position: absolute;
@@ -285,6 +281,14 @@ footer {
       .work .project .text .button {
         margin: 1.5rem 0 0;
         font-size: 0.8rem; }
+      .work .project .text a.arrow {
+        margin: 2rem 0 0;
+        text-decoration: none;
+        text-transform: uppercase; }
+        .work .project .text a.arrow svg {
+          fill: white; }
+      .work .project .text a.arrow:hover svg, .work .project .text a:focus svg {
+        fill: black; }
     .work .project .text div:first-of-type {
       padding: 0; }
 
@@ -317,9 +321,6 @@ footer {
 /* CUSTOMIZED WORK SECTIONS */
 .work .project.embello {
   color: white;
-  background-color: #bfc7be;
-  background-color: #dbe5da;
-  background-color: #edf2ed;
   background-color: #b56422; }
   .work .project.embello figure {
     width: 100%; }
@@ -334,6 +335,8 @@ footer {
     color: white; }
   .work .project.bright-bucks .text a:hover, .work .project.bright-bucks .text a:focus {
     color: black; }
+  .work .project.bright-bucks .text a.arrow {
+    text-decoration: none; }
 
 .work .project.solana {
   color: white;
@@ -343,17 +346,19 @@ footer {
     color: white; }
   .work .project.solana .text a:hover, .work .project.solana .text a:focus {
     color: black; }
+  .work .project.solana .text a.arrow {
+    text-decoration: none; }
 
 .work .project.flo-recruit {
   color: white;
-  background-color: #fc9c00;
-  background-color: #fccc7e;
   background-color: #d0204e; }
   .work .project.flo-recruit .text a {
     text-decoration: underline;
     color: white; }
   .work .project.flo-recruit .text a:hover, .work .project.flo-recruit .text a:focus {
     color: black; }
+  .work .project.flo-recruit .text a.arrow {
+    text-decoration: none; }
 
 @media (min-width: 48rem) {
   .work .project.embello {
@@ -408,9 +413,9 @@ footer {
       flex-direction: column;
       align-items: center;
       padding: 1rem 0;
-      font-family: "bau-regular", sans-serif;
-      font-style: normal;
-      font-weight: 400; }
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-style: normal; }
       .about .team ul li img {
         width: 6rem;
         height: 6rem;

@@ -68,6 +68,7 @@
     figure {
       width: 50%;
       margin: 0 auto;
+      picture {display: block;}
     }
     .overlay {
       display: block;
@@ -88,6 +89,13 @@
         margin: 1.5rem 0 0;
         font-size: 0.8rem;
       }
+      a.arrow {
+        margin: 2rem 0 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        svg {fill: white;}
+      }
+      a.arrow:hover svg, a:focus svg {fill: black;}
     }
     .text div:first-of-type {padding: 0;}
   }
@@ -131,9 +139,6 @@
 /* CUSTOMIZED WORK SECTIONS */
 .work .project.embello {
   color: white;
-  background-color: #bfc7be;
-  background-color: #dbe5da;
-  background-color: #edf2ed;
   background-color: #b56422;
   figure {width: 100%;}
   .text div:first-of-type {padding: 2rem 0 0;}
@@ -148,6 +153,7 @@
       color: white;
     }
     a:hover, a:focus {color: black;}
+    a.arrow {text-decoration: none;}
   }
 }
 
@@ -160,13 +166,12 @@
       color: white;
     }
     a:hover, a:focus {color: black;}
+    a.arrow {text-decoration: none;}
   }
 }
 
 .work .project.flo-recruit {
   color: white;
-  background-color: #fc9c00;
-  background-color: #fccc7e;
   background-color: #d0204e;
   .text {
     a {
@@ -174,6 +179,7 @@
       color: white;
     }
     a:hover, a:focus {color: black;}
+    a.arrow {text-decoration: none;}
   }
 }
 
@@ -239,7 +245,7 @@
         flex-direction: column;
         align-items: center;
         padding: 1rem 0;
-        @include font-regular;
+        @include font-body;
         img {
           width: 6rem;
           height: 6rem;
