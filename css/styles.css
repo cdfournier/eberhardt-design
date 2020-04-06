@@ -1,13 +1,21 @@
 @font-face {
+  font-family: "bau-regular";
+  src: url("../fonts/bau-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bau-regular.woff") format("woff"), url("../fonts/bau-regular.ttf") format("truetype"), url("../fonts/bau-regular.svg#bau-regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: "interstate-bold";
   src: url("../fonts/interstate-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/interstate-bold.woff") format("woff"), url("../fonts/interstate-bold.ttf") format("truetype"), url("../fonts/interstate-bold.svg#interstate-bold") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 /*
-$font-body: ("Montserrat", sans-serif);
-$font-regular: 400;
-$font-bold: 700;
+@mixin font-bold {
+  font-family: $font-body;
+  font-style: normal;
+  font-weight: $font-bold;
+}
 */
 * {
   -webkit-box-sizing: border-box;
@@ -20,8 +28,8 @@ html {
   height: 100%;
   margin: 0 auto;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: "bau-regular";
+  font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-size: 100%;
@@ -90,8 +98,8 @@ p {
   line-height: 1.5; }
 
 strong, em, b {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "interstate-bold";
+  font-weight: normal;
   font-style: normal; }
 
 small {
@@ -108,8 +116,8 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
   display: none; }
 
 a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "interstate-bold";
+  font-weight: normal;
   font-style: normal;
   text-decoration: none;
   color: black;
@@ -128,8 +136,8 @@ a.arrow {
   align-items: center;
   width: fit-content;
   margin: 1rem 0 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "interstate-bold";
+  font-weight: normal;
   font-style: normal;
   line-height: 1;
   text-decoration: none;
@@ -151,7 +159,7 @@ a.arrow {
 a.arrow:hover, a.arrow:focus {
   text-decoration: underline; }
   a.arrow:hover span svg, a.arrow:focus span svg {
-    margin: 0 0 0 0.75rem; }
+    margin: 0 0 0 0.5rem; }
 
 button, .button {
   display: inline-flex;
@@ -249,7 +257,7 @@ footer {
     padding: 1rem 2rem 0;
     font-size: 1.5rem;
     text-align: center; }
-  .work .project {
+  .work .embello, .work .bright-bucks, .work .solana, .work .flo-recruit {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,12 +266,12 @@ footer {
     width: 100%;
     margin: 0;
     padding: 4rem 2rem; }
-    .work .project figure {
+    .work .embello figure, .work .bright-bucks figure, .work .solana figure, .work .flo-recruit figure {
       width: 50%;
       margin: 0 auto; }
-      .work .project figure picture {
+      .work .embello figure picture, .work .bright-bucks figure picture, .work .solana figure picture, .work .flo-recruit figure picture {
         display: block; }
-    .work .project .overlay {
+    .work .embello .overlay, .work .bright-bucks .overlay, .work .solana .overlay, .work .flo-recruit .overlay {
       display: block;
       position: absolute;
       top: 0;
@@ -271,105 +279,99 @@ footer {
       bottom: 0;
       left: 0;
       background: black; }
-    .work .project .text {
+    .work .embello .text, .work .bright-bucks .text, .work .solana .text, .work .flo-recruit .text {
       position: relative;
       width: 100%;
       margin: 1rem 0 0;
-      padding: 0; }
-      .work .project .text div {
+      padding: 0;
+      color: white; }
+      .work .embello .text div, .work .bright-bucks .text div, .work .solana .text div, .work .flo-recruit .text div {
         padding: 1.5rem 0 0; }
-      .work .project .text .button {
+      .work .embello .text .button, .work .bright-bucks .text .button, .work .solana .text .button, .work .flo-recruit .text .button {
         margin: 1.5rem 0 0;
         font-size: 0.8rem; }
-      .work .project .text a.arrow {
+      .work .embello .text a, .work .bright-bucks .text a, .work .solana .text a, .work .flo-recruit .text a {
+        text-decoration: underline;
+        color: white; }
+      .work .embello .text a:hover, .work .embello .text a:focus, .work .bright-bucks .text a:hover, .work .bright-bucks .text a:focus, .work .solana .text a:hover, .work .solana .text a:focus, .work .flo-recruit .text a:hover, .work .flo-recruit .text a:focus {
+        color: black; }
+      .work .embello .text a.arrow, .work .bright-bucks .text a.arrow, .work .solana .text a.arrow, .work .flo-recruit .text a.arrow {
         margin: 2rem 0 0;
         text-decoration: none;
-        text-transform: uppercase; }
-        .work .project .text a.arrow svg {
+        text-transform: uppercase;
+        color: white; }
+        .work .embello .text a.arrow svg, .work .bright-bucks .text a.arrow svg, .work .solana .text a.arrow svg, .work .flo-recruit .text a.arrow svg {
           fill: white; }
-      .work .project .text a.arrow:hover svg, .work .project .text a:focus svg {
-        fill: black; }
-    .work .project .text div:first-of-type {
+      .work .embello .text a.arrow:hover, .work .embello .text a:focus, .work .bright-bucks .text a.arrow:hover, .work .bright-bucks .text a:focus, .work .solana .text a.arrow:hover, .work .solana .text a:focus, .work .flo-recruit .text a.arrow:hover, .work .flo-recruit .text a:focus {
+        color: black; }
+        .work .embello .text a.arrow:hover svg, .work .embello .text a:focus svg, .work .bright-bucks .text a.arrow:hover svg, .work .bright-bucks .text a:focus svg, .work .solana .text a.arrow:hover svg, .work .solana .text a:focus svg, .work .flo-recruit .text a.arrow:hover svg, .work .flo-recruit .text a:focus svg {
+          fill: black; }
+    .work .embello .text div:first-of-type, .work .bright-bucks .text div:first-of-type, .work .solana .text div:first-of-type, .work .flo-recruit .text div:first-of-type {
       padding: 0; }
 
 @media (min-width: 48rem) {
   .work {
     flex-direction: row;
     flex-wrap: wrap; }
-    .work .project {
+    .work .embello, .work .bright-bucks, .work .solana, .work .flo-recruit {
       flex-direction: row;
       align-items: center;
-      width: 50%; }
-      .work .project figure {
+      width: 100%; }
+      .work .embello figure, .work .bright-bucks figure, .work .solana figure, .work .flo-recruit figure {
         width: 25%;
         margin: 0; }
-      .work .project .text {
+      .work .embello .text, .work .bright-bucks .text, .work .solana .text, .work .flo-recruit .text {
         width: 50%;
         margin: -1rem 0 0;
         padding: 0 0 0 4rem; }
-    .work .project.reverse {
+    .work .reverse {
       flex-direction: row-reverse; }
-      .work .project.reverse .text {
-        padding: 0 4rem 0 0; }
-    .work .project.wide {
-      width: 100%; } }
+      .work .reverse .text {
+        padding: 0 4rem 0 0; } }
 
 @media (min-width: 64rem) {
-  .work .project figure {
+  .work .embello figure, .work .bright-bucks figure, .work .solana figure, .work .flo-recruit figure {
     width: 30%; } }
 
 /* CUSTOMIZED WORK SECTIONS */
-.work .project.embello {
-  color: white;
+.work .embello {
   background-color: #b56422; }
-  .work .project.embello figure {
+  .work .embello figure {
     width: 100%; }
-  .work .project.embello .text div:first-of-type {
-    padding: 2rem 0 0; }
 
-.work .project.bright-bucks {
-  color: white;
+.work .bright-bucks {
   background-color: #896bdb; }
-  .work .project.bright-bucks .text a {
-    text-decoration: underline;
-    color: white; }
-  .work .project.bright-bucks .text a:hover, .work .project.bright-bucks .text a:focus {
-    color: black; }
-  .work .project.bright-bucks .text a.arrow {
-    text-decoration: none; }
 
-.work .project.solana {
-  color: white;
+.work .solana {
   background-color: #009e65; }
-  .work .project.solana .text a {
-    text-decoration: underline;
-    color: white; }
-  .work .project.solana .text a:hover, .work .project.solana .text a:focus {
-    color: black; }
-  .work .project.solana .text a.arrow {
-    text-decoration: none; }
 
-.work .project.flo-recruit {
-  color: white;
-  background-color: #d0204e; }
-  .work .project.flo-recruit .text a {
-    text-decoration: underline;
-    color: white; }
-  .work .project.flo-recruit .text a:hover, .work .project.flo-recruit .text a:focus {
+.work .flo-recruit {
+  background-color: #fccc7e; }
+  .work .flo-recruit .text {
     color: black; }
-  .work .project.flo-recruit .text a.arrow {
-    text-decoration: none; }
+    .work .flo-recruit .text a {
+      color: black; }
+    .work .flo-recruit .text a:hover, .work .flo-recruit .text a:focus {
+      color: white; }
+    .work .flo-recruit .text a.arrow {
+      color: black; }
+      .work .flo-recruit .text a.arrow svg {
+        fill: black; }
+    .work .flo-recruit .text a.arrow:hover, .work .flo-recruit .text a.arrow:focus {
+      color: white; }
+      .work .flo-recruit .text a.arrow:hover svg, .work .flo-recruit .text a.arrow:focus svg {
+        fill: white; }
 
 @media (min-width: 48rem) {
-  .work .project.embello {
+  .work .embello {
     padding: 4rem 2rem; }
-    .work .project.embello figure {
+    .work .embello figure {
       width: 50%; }
-    .work .project.embello .text {
+    .work .embello .text {
       padding: 0 0 0 4rem; }
-    .work .project.embello .text div:first-of-type {
+    .work .embello .text div:first-of-type {
       padding: 0; }
-  .work .project.solana .text {
+  .work .solana .text {
     padding: 0 0 0 2rem; } }
 
 .clients {
@@ -413,8 +415,8 @@ footer {
       flex-direction: column;
       align-items: center;
       padding: 1rem 0;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 400;
+      font-family: "bau-regular";
+      font-weight: normal;
       font-style: normal; }
       .about .team ul li img {
         width: 6rem;

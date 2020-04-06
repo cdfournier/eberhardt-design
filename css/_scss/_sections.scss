@@ -56,7 +56,7 @@
     font-size: 1.5rem;
     text-align: center;
   }
-  .project {
+  .embello, .bright-bucks, .solana, .flo-recruit {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,18 +84,28 @@
       width: 100%;
       margin: 1rem 0 0;
       padding: 0;
+      color: white;
       div {padding: 1.5rem 0 0;}
       .button {
         margin: 1.5rem 0 0;
         font-size: 0.8rem;
       }
+      a {
+        text-decoration: underline;
+        color: white;
+      }
+      a:hover, a:focus {color: black;}
       a.arrow {
         margin: 2rem 0 0;
         text-decoration: none;
         text-transform: uppercase;
+        color: white;
         svg {fill: white;}
       }
-      a.arrow:hover svg, a:focus svg {fill: black;}
+      a.arrow:hover, a:focus {
+        color: black;
+        svg {fill: black;}
+      }
     }
     .text div:first-of-type {padding: 0;}
   }
@@ -105,10 +115,10 @@
   .work {
     flex-direction: row;
     flex-wrap: wrap;
-    .project {
+    .embello, .bright-bucks, .solana, .flo-recruit {
       flex-direction: row;
       align-items: center;
-      width: 50%;
+      width: 100%;
       figure {
         width: 25%;
         margin: 0;
@@ -119,17 +129,16 @@
         padding: 0 0 0 4rem;
       }
     }
-    .project.reverse {
+    .reverse {
       flex-direction: row-reverse;
       .text {padding: 0 4rem 0 0;}
     }
-    .project.wide {width: 100%;}
   }
 }
 
 @media (min-width: 64rem) {
   .work {
-    .project {
+    .embello, .bright-bucks, .solana, .flo-recruit {
       figure {width: 30%;}
     }
   }
@@ -137,60 +146,40 @@
 
 
 /* CUSTOMIZED WORK SECTIONS */
-.work .project.embello {
-  color: white;
+.work .embello {
   background-color: #b56422;
   figure {width: 100%;}
-  .text div:first-of-type {padding: 2rem 0 0;}
 }
 
-.work .project.bright-bucks {
-  color: white;
-  background-color: #896bdb;
-  .text {
-    a {
-      text-decoration: underline;
-      color: white;
-    }
-    a:hover, a:focus {color: black;}
-    a.arrow {text-decoration: none;}
-  }
-}
+.work .bright-bucks {background-color: #896bdb;}
 
-.work .project.solana {
-  color: white;
-  background-color: #009e65;
-  .text {
-    a {
-      text-decoration: underline;
-      color: white;
-    }
-    a:hover, a:focus {color: black;}
-    a.arrow {text-decoration: none;}
-  }
-}
+.work .solana {background-color: #009e65;}
 
-.work .project.flo-recruit {
-  color: white;
-  background-color: #d0204e;
+.work .flo-recruit {
+  background-color: #fccc7e;
   .text {
-    a {
-      text-decoration: underline;
-      color: white;
+    color: black;
+    a {color: black;}
+    a:hover, a:focus {color: white;}
+    a.arrow {
+      color: black;
+      svg {fill: black;}
     }
-    a:hover, a:focus {color: black;}
-    a.arrow {text-decoration: none;}
+    a.arrow:hover, a.arrow:focus {
+      color: white;
+      svg {fill: white;}
+    }
   }
 }
 
 @media (min-width: 48rem) {
-  .work .project.embello {
+  .work .embello {
     padding: 4rem 2rem;
     figure {width: 50%;}
     .text {padding: 0 0 0 4rem;}
     .text div:first-of-type {padding: 0;}
   }
-  .work .project.solana {
+  .work .solana {
     .text {padding: 0 0 0 2rem;}
   }
 }
@@ -311,4 +300,9 @@
 
 @media (min-width: 48rem) {
   .contact {padding: 4rem 2rem;}
+}
+
+
+// PROJECTS
+.projects {
 }
