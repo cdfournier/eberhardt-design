@@ -1,0 +1,38 @@
+// HEADER
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  .logo {
+    display: grid;
+    width: 20%;
+    max-width: 3.5rem;
+  }
+  nav ul {
+    justify-content: flex-end;
+    li {padding: 0 0 0 1rem;}
+    li:first-of-type {padding: 0;}
+  }
+}
+
+.header--fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0
+}
+
+.headroom {
+  @include transition (all, 0.25s, ease, 0s);
+  will-change: transform
+}
+
+.headroom--pinned {@include transform (translateY(0));}
+
+.headroom--unpinned {@include transform (translateY(-100%));}

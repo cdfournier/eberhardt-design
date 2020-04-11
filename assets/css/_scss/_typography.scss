@@ -16,7 +16,6 @@ h1, h2, h3, h4, p {
 h1, h2, h3, h4 {
   @include font-headline;
   line-height: 1.1;
-  text-transform: uppercase;
 }
 
 h1 {font-size: 3.157rem;}
@@ -41,7 +40,7 @@ p {
   line-height: 1.5;
 }
 
-strong, em, b {@include font-bold;}
+strong, em, b {@include font-body-bold;}
 
 small {font-size: 0.8rem;}
 

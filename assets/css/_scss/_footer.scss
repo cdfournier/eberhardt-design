@@ -1,0 +1,25 @@
+// FOOTER
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  nav ul {
+    justify-content: center;
+    li {padding: 0 0.5rem;}
+  }
+  p.copyright {
+    padding: 1rem 0 0;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+footer.home {
+  color: white;
+  background: $color-dk-blue;
+  nav ul li a {color: white;}
+  nav ul li a:hover, nav ul li a:focus {color: $color-hover;}
+}
