@@ -6,9 +6,54 @@ footer {
   width: 100%;
   margin: 0;
   padding: 2rem;
-  nav ul {
-    justify-content: center;
-    li {padding: 0 0.5rem;}
+  color: white;
+  .contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0 2rem;
+    color: white;
+    h2 {
+      span {
+        display: block;
+        width: 100%;
+        margin: 0 0 0.25rem;
+        @include font-body-bold;
+        font-size: 0.8rem;
+        line-height: 2;
+        text-transform: uppercase;
+        color: $color-accen;
+      }
+    }
+    p a.arrow {
+      svg {fill: white;}
+    }
+    p a.arrow:hover, p a.arrow:focus {
+      svg {fill: $color-hover;}
+    }
+  }
+  nav {
+    width: 100%;
+    ul {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      width: inherit;
+      margin: auto;
+      padding: 0;
+      @include font-body-bold;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      list-style-type: none;
+      color: white;
+      li {
+        padding: 0 0.5rem;
+        color: $color-dk-gray;
+      }
+      li a {color: white;}
+      li a:hover, li a:focus {color: $color-hover;}
+    }
   }
   p.copyright {
     padding: 1rem 0 0;
@@ -17,9 +62,4 @@ footer {
   }
 }
 
-footer.home {
-  color: white;
-  background: $color-dk-blue;
-  nav ul li a {color: white;}
-  nav ul li a:hover, nav ul li a:focus {color: $color-hover;}
-}
+@media (min-width: 64rem) {footer {padding: 4rem;}}

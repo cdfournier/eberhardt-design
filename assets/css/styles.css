@@ -15,17 +15,37 @@ html {
   text-rendering: optimizeLegibility;
   font-size: 100%;
   color: black;
+  background: #1b1e2e;
   scroll-behavior: smooth; }
 
-body {
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
+
+@media (min-width: 64rem) {
+  html {
+    font-size: 120%; } }
+
+@media (min-width: 90rem) {
+  html {
+    font-size: 150%; } }
+
+body, .body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
+  overflow-y: auto;
   margin: 0 auto;
   padding: 0; }
 
+body.open {
+  position: fixed;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: hidden; }
+
 main {
-  position: relative; }
+  display: block; }
 
 picture {
   display: grid; }
@@ -119,7 +139,6 @@ a.arrow {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 0.8rem;
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
@@ -178,41 +197,34 @@ button:hover, button:focus,
   color: black;
   background-color: transparent; }
 
-nav {
-  width: 100%; }
-  nav ul {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: inherit;
-    margin: auto;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 0.8rem;
-    line-height: 1;
-    list-style-type: none; }
-
 header {
   display: flex;
-  align-items: center;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
   position: fixed;
+  top: 0;
+  z-index: 100;
   width: 100%;
   margin: 0;
   padding: 2rem; }
   header .logo {
     display: grid;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
     width: 20%;
-    max-width: 3.5rem; }
-  header nav ul {
-    justify-content: flex-end; }
-    header nav ul li {
-      padding: 0 0 0 1rem; }
-    header nav ul li:first-of-type {
-      padding: 0; }
+    max-width: 3.5rem;
+    -webkit-transition: all 0.325s ease 0s;
+    -moz-transition: all 0.325s ease 0s;
+    -ms-transition: all 0.325s ease 0s;
+    -o-transition: all 0.325s ease 0s;
+    transition: all 0.325s ease 0s; }
+  header .logo.open {
+    -webkit-transform: translateX(-10rem);
+    -moz-transform: translateX(-10rem);
+    -ms-transform: translateX(-10rem);
+    -o-transform: translateX(-10rem);
+    transform: translateX(-10rem); }
 
 .header--fixed {
   position: fixed;
@@ -222,11 +234,11 @@ header {
   top: 0; }
 
 .headroom {
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
-  transition: all 0.25s ease 0s;
+  -webkit-transition: all 0.325s ease 0s;
+  -moz-transition: all 0.325s ease 0s;
+  -ms-transition: all 0.325s ease 0s;
+  -o-transition: all 0.325s ease 0s;
+  transition: all 0.325s ease 0s;
   will-change: transform; }
 
 .headroom--pinned {
@@ -249,35 +261,71 @@ footer {
   flex-direction: column;
   width: 100%;
   margin: 0;
-  padding: 2rem; }
-  footer nav ul {
-    justify-content: center; }
-    footer nav ul li {
-      padding: 0 0.5rem; }
+  padding: 2rem;
+  color: white; }
+  footer .contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0 2rem;
+    color: white; }
+    footer .contact h2 span {
+      display: block;
+      width: 100%;
+      margin: 0 0 0.25rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 0.8rem;
+      line-height: 2;
+      text-transform: uppercase;
+      color: #c69b45; }
+    footer .contact p a.arrow svg {
+      fill: white; }
+    footer .contact p a.arrow:hover svg, footer .contact p a.arrow:focus svg {
+      fill: #ff5000; }
+  footer nav {
+    width: 100%; }
+    footer nav ul {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      width: inherit;
+      margin: auto;
+      padding: 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      list-style-type: none;
+      color: white; }
+      footer nav ul li {
+        padding: 0 0.5rem;
+        color: #939393; }
+      footer nav ul li a {
+        color: white; }
+      footer nav ul li a:hover, footer nav ul li a:focus {
+        color: #ff5000; }
   footer p.copyright {
     padding: 1rem 0 0;
     font-size: 0.8rem;
     text-align: center; }
 
-footer.home {
-  color: white;
-  background: #1b1e2e; }
-  footer.home nav ul li a {
-    color: white; }
-  footer.home nav ul li a:hover, footer.home nav ul li a:focus {
-    color: #ff5000; }
+@media (min-width: 64rem) {
+  footer {
+    padding: 4rem; } }
 
-.introduction {
+main.home .introduction {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 10;
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  color: white;
-  background: #1b1e2e; }
-  .introduction h1 span {
+  color: white; }
+  main.home .introduction h1 span {
     display: block;
     width: 100%;
     margin: 0 0 1rem;
@@ -289,16 +337,21 @@ footer.home {
     text-transform: uppercase;
     color: #c69b45; }
 
-.explore {
+@media (min-width: 64rem) {
+  main.home .introduction {
+    padding: 4rem; } }
+
+main.home .explore {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 2rem; }
-  .explore h2 span {
+  padding: 2rem;
+  background: white; }
+  main.home .explore h2 span {
     display: block;
     width: 100%;
-    margin: 0 0 1rem;
+    margin: 0 0 0.25rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -306,21 +359,21 @@ footer.home {
     line-height: 2;
     text-transform: uppercase;
     color: #c69b45; }
-  .explore article {
+  main.home .explore article {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 1rem 0 0; }
-    .explore article figure {
+    main.home .explore article figure {
       display: block;
       width: 100%;
       overflow: hidden;
       margin: 0;
       padding: 0 0 0.5rem; }
-      .explore article figure a picture {
+      main.home .explore article figure a picture {
         overflow: hidden;
         border-radius: 0.25rem; }
-        .explore article figure a picture source, .explore article figure a picture img {
+        main.home .explore article figure a picture source, main.home .explore article figure a picture img {
           -webkit-transition: all 2.5s ease 0s;
           -moz-transition: all 2.5s ease 0s;
           -ms-transition: all 2.5s ease 0s;
@@ -331,14 +384,25 @@ footer.home {
           -ms-transform: scale(1);
           -o-transform: scale(1);
           transform: scale(1); }
-      .explore article figure a:hover picture source, .explore article figure a:hover picture img, .explore article figure a:focus picture source, .explore article figure a:focus picture img {
+      main.home .explore article figure a:hover picture source, main.home .explore article figure a:hover picture img, main.home .explore article figure a:focus picture source, main.home .explore article figure a:focus picture img {
         -webkit-transform: scale(1.25);
         -moz-transform: scale(1.25);
         -ms-transform: scale(1.25);
         -o-transform: scale(1.25);
         transform: scale(1.25); }
-      .explore article figure a figcaption {
-        margin: 1rem 0 0;
+      main.home .explore article figure figcaption {
+        display: block;
+        margin: 1rem 0 0; }
+        main.home .explore article figure figcaption span {
+          display: block;
+          width: 100%;
+          margin: 1rem 0;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          font-size: 0.8rem;
+          text-transform: uppercase; }
+      main.home .explore article figure figcaption a {
         font-family: "Libre Baskerville", serif;
         font-weight: 400;
         font-style: normal;
@@ -349,46 +413,50 @@ footer.home {
         -ms-transition: all 0.325s ease 0s;
         -o-transition: all 0.325s ease 0s;
         transition: all 0.325s ease 0s; }
-      .explore article figure a:hover figcaption, .explore article figure a:focus figcaption {
+      main.home .explore article figure figcaption a:hover, main.home .explore article figure figcaption a:focus {
         color: #ff5000; }
-    .explore article figure::after {
+    main.home .explore article figure::after {
       display: block;
       width: 100%;
       height: 1px;
       margin: 1rem 0 0;
       background: #f5f5f5;
       content: ""; }
-  .explore article:last-of-type figure:after {
+  main.home .explore article:last-of-type figure:after {
     display: none; }
 
 @media (min-width: 48rem) {
-  .explore {
+  main.home .explore {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start; }
-    .explore h2 {
+    main.home .explore h2 {
       width: 100%; }
-    .explore article {
+    main.home .explore article {
       width: 50%;
       margin: 2rem 0 0; }
-      .explore article figure::after {
+      main.home .explore article figure::after {
         display: none; }
-    .explore article:first-of-type {
+    main.home .explore article:first-of-type {
       padding: 0 1rem 0 0; }
-    .explore article:last-of-type {
+    main.home .explore article:last-of-type {
       padding: 0 0 0 1rem; } }
 
+@media (min-width: 64rem) {
+  main.home .explore {
+    padding: 4rem; } }
+
 /* SERVICES */
-.services {
+main.home .services {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 2rem;
   background: #f5f5f5; }
-  .services h2 span {
+  main.home .services h2 span {
     display: block;
     width: 100%;
-    margin: 0 0 1rem;
+    margin: 0 0 0.25rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -396,7 +464,7 @@ footer.home {
     line-height: 2;
     text-transform: uppercase;
     color: #c69b45; }
-  .services ul {
+  main.home .services ul {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -404,7 +472,7 @@ footer.home {
     padding: 0;
     list-style: none;
     counter-reset: value; }
-    .services ul li {
+    main.home .services ul li {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -413,13 +481,13 @@ footer.home {
       font-weight: 400;
       font-style: normal;
       font-size: 1.333rem; }
-      .services ul li span {
+      main.home .services ul li span {
         display: flex;
         align-items: center;
         flex-direction: row;
         width: 100%;
         margin: 0 0 0.25rem; }
-      .services ul li span::before {
+      main.home .services ul li span::before {
         flex: 0 1 auto;
         padding: 0 0.5rem 0 0;
         font-family: "Montserrat", sans-serif;
@@ -429,47 +497,64 @@ footer.home {
         color: #c69b45;
         counter-increment: value;
         content: "0" counter(value); }
-      .services ul li span::after {
+      main.home .services ul li span::after {
         display: block;
         flex: 1;
         height: 1px;
         background: #c4c4c4;
         content: ""; }
-    .services ul li:last-of-type {
+    main.home .services ul li:last-of-type {
       margin: 0; }
 
 @media (min-width: 48rem) {
-  .services ul {
+  main.home .services ul {
     flex-direction: row;
     justify-content: space-between; }
-    .services ul li {
+    main.home .services ul li {
       width: 30%;
       margin: 0; } }
 
+@media (min-width: 64rem) {
+  main.home .services {
+    padding: 4rem; } }
+
 /* TEAM */
-.team {
+main.home .team {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2rem; }
-  .team ul {
+  padding: 2rem;
+  background: white; }
+  main.home .team h2 span {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 2;
+    text-transform: uppercase;
+    color: #c69b45; }
+  main.home .team ul {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 1rem 0 0;
     padding: 0;
     list-style: none; }
-    .team ul li a {
+    main.home .team ul li {
       display: flex;
+      align-items: center;
       flex-direction: row;
       margin: 0 0 1rem; }
-      .team ul li a figure {
+      main.home .team ul li figure {
         display: grid;
         overflow: hidden;
         width: 25%;
         margin: 0;
         border-radius: 0.25rem; }
-        .team ul li a figure img {
+        main.home .team ul li figure a img {
           -webkit-transition: all 2.5s ease 0s;
           -moz-transition: all 2.5s ease 0s;
           -ms-transition: all 2.5s ease 0s;
@@ -480,28 +565,33 @@ footer.home {
           -ms-transform: scale(1);
           -o-transform: scale(1);
           transform: scale(1); }
-      .team ul li a .text {
+        main.home .team ul li figure a:hover img, main.home .team ul li figure a:focus img {
+          -webkit-transform: scale(1.25);
+          -moz-transform: scale(1.25);
+          -ms-transform: scale(1.25);
+          -o-transform: scale(1.25);
+          transform: scale(1.25); }
+      main.home .team ul li a .text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 75%;
         padding: 0 0 0 1rem;
         -webkit-transition: all 0.325s ease 0s;
         -moz-transition: all 0.325s ease 0s;
         -ms-transition: all 0.325s ease 0s;
         -o-transition: all 0.325s ease 0s;
         transition: all 0.325s ease 0s; }
-        .team ul li a .text .who {
+        main.home .team ul li a .text .who {
           display: flex;
           align-items: center;
           flex-direction: row;
           width: 100%; }
-          .team ul li a .text .who span.social {
+          main.home .team ul li a .text .who span.social {
             width: 1.75rem;
             min-width: 1.75rem;
             height: 1.75rem;
             margin: 0 0.25rem 0 0; }
-            .team ul li a .text .who span.social svg {
+            main.home .team ul li a .text .who span.social svg {
               width: 100%;
               height: 100%;
               -webkit-transition: all 0.325s ease 0s;
@@ -509,56 +599,65 @@ footer.home {
               -ms-transition: all 0.325s ease 0s;
               -o-transition: all 0.325s ease 0s;
               transition: all 0.325s ease 0s; }
-          .team ul li a .text .who span.name {
+          main.home .team ul li a .text .who span.name {
             font-family: "Libre Baskerville", serif;
             font-weight: 400;
             font-style: normal;
             font-size: 1.777rem; }
-        .team ul li a .text .what {
+        main.home .team ul li a .text .what {
           padding: 0 0 0 2rem;
-          font-size: 0.8rem;
+          font-size: 1rem;
           text-transform: capitalize; }
-    .team ul li a:hover figure img, .team ul li a:focus figure img {
-      -webkit-transform: scale(1.25);
-      -moz-transform: scale(1.25);
-      -ms-transform: scale(1.25);
-      -o-transform: scale(1.25);
-      transform: scale(1.25); }
-    .team ul li a:hover .text, .team ul li a:focus .text {
-      color: #ff5000; }
-      .team ul li a:hover .text .who span.social, .team ul li a:focus .text .who span.social {
-        fill: #ff5000; }
-    .team ul li:last-of-type a {
+      main.home .team ul li a:hover .text, main.home .team ul li a:focus .text {
+        color: #ff5000; }
+        main.home .team ul li a:hover .text .who span.social, main.home .team ul li a:focus .text .who span.social {
+          fill: #ff5000; }
+    main.home .team ul li:last-of-type {
       margin: 0; }
 
+@media (orientation: landscape) {
+  main.home .team ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    main.home .team ul li {
+      width: 48%; } }
+
 @media (min-width: 48rem) {
-  .team ul {
+  main.home .team ul {
     flex-direction: row;
     justify-content: space-between; }
-    .team ul li {
-      width: 30%; }
-    .team ul li a {
+    main.home .team ul li {
       align-items: flex-start;
       flex-direction: column;
+      width: 30%;
       margin: 0; }
-      .team ul li a .text {
+      main.home .team ul li figure {
+        width: 35%; }
+      main.home .team ul li a .text {
         align-items: flex-start;
         padding: 0.5rem 0 0;
         text-align: left; }
-        .team ul li a .text .who {
+        main.home .team ul li a .text .who {
           justify-content: flex-start; }
-        .team ul li a .text .what {
+        main.home .team ul li a .text .what {
           padding: 0; } }
 
-/* CONTACT */
-.contact {
+@media (min-width: 64rem) {
+  main.home .team {
+    padding: 4rem; }
+    main.home .team ul li figure {
+      width: 30%; } }
+
+main.services .introduction {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
+  min-height: 100vh;
   padding: 2rem;
-  color: white;
-  background: #1b1e2e; }
-  .contact h2 span {
+  color: white; }
+  main.services .introduction h1 span {
     display: block;
     width: 100%;
     margin: 0 0 1rem;
@@ -569,19 +668,25 @@ footer.home {
     line-height: 2;
     text-transform: uppercase;
     color: #c69b45; }
-  .contact p a.arrow svg {
-    fill: white; }
-  .contact p a.arrow:hover svg, .contact p a.arrow:focus svg {
-    fill: #ff5000; }
 
-.benefits {
+main.services .services {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   padding: 2rem;
   background: #f5f5f5; }
-  .benefits ul {
+  main.services .services h2 span {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 2;
+    text-transform: uppercase;
+    color: #c69b45; }
+  main.services .services ul {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -589,7 +694,7 @@ footer.home {
     padding: 0;
     list-style: none;
     counter-reset: value; }
-    .benefits ul li {
+    main.services .services ul li {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -598,26 +703,348 @@ footer.home {
       font-weight: 400;
       font-style: normal;
       font-size: 1.333rem; }
-      .benefits ul li span {
+      main.services .services ul li span {
         display: flex;
         align-items: center;
         flex-direction: row;
         width: 100%;
         margin: 0 0 0.25rem; }
-      .benefits ul li span::before {
+      main.services .services ul li span::before {
         flex: 0 1 auto;
         padding: 0 0.5rem 0 0;
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         font-style: normal;
-        color: #c4c4c4;
+        font-size: 90%;
+        color: #c69b45;
         counter-increment: value;
         content: "0" counter(value); }
-      .benefits ul li span::after {
+      main.services .services ul li span::after {
         display: block;
         flex: 1;
         height: 1px;
         background: #c4c4c4;
         content: ""; }
-    .benefits ul li:last-of-type {
+      main.services .services ul li ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0.5rem 0 0;
+        padding: 0;
+        list-style: decimal; }
+        main.services .services ul li ul li {
+          width: 100%;
+          margin: 0;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          line-height: 1.5; }
+    main.services .services ul li:last-of-type {
       margin: 0; }
+
+main.services .process {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  background: #f5f5f5; }
+  main.services .process h2 {
+    background: #f5f5f5; }
+    main.services .process h2 span {
+      display: block;
+      width: 100%;
+      margin: 0 0 0.25rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 0.8rem;
+      line-height: 2;
+      text-transform: uppercase;
+      color: #c69b45; }
+  main.services .process ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: steps; }
+    main.services .process ul li {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 1rem 0;
+      font-family: "Libre Baskerville", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.333rem; }
+    main.services .process ul li::before {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      z-index: 10;
+      width: 2rem;
+      height: 2rem;
+      margin: 0 1rem 0 0;
+      border: 1px solid #c4c4c4;
+      border-radius: 100%;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 70%;
+      color: #c69b45;
+      background: #f5f5f5;
+      counter-increment: steps;
+      content: "" counter(steps); }
+    main.services .process ul li::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(1rem - 1px);
+      width: 2px;
+      height: 100%;
+      background: #c4c4c4;
+      content: ""; }
+    main.services .process ul li:first-of-type {
+      padding: 0 0 1rem; }
+    main.services .process ul li:last-of-type {
+      padding: 1rem 0 0; }
+
+@media (orientation: landscape) {
+  main.services .services ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    main.services .services ul li {
+      width: 48%; } }
+
+@media (min-width: 48rem) {
+  main.services .services ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    main.services .services ul li {
+      width: 45%; }
+  main.services .process ul {
+    flex-direction: row;
+    justify-content: stretch; }
+    main.services .process ul li {
+      align-items: flex-start;
+      flex-direction: column;
+      width: auto;
+      padding: 1rem 2rem 1rem 0; }
+    main.services .process ul li::before {
+      margin: 0 0 1rem; }
+    main.services .process ul li::after {
+      top: 30%;
+      left: 0;
+      width: 100%;
+      height: 2px; }
+    main.services .process ul li:first-of-type {
+      padding: 1rem 2rem 1rem 0; }
+    main.services .process ul li:last-of-type {
+      padding: 1rem 0; }
+    main.services .process ul li:last-of-type::after {
+      display: none; } }
+
+@media (min-width: 64rem) {
+  main.services .introduction {
+    padding: 4rem; }
+  main.services .services {
+    padding: 4rem; }
+  main.services .process {
+    padding: 4rem; } }
+
+@media (min-width: 90rem) {
+  main.services .services ul li {
+    width: 30%; }
+  main.services .process ul li {
+    padding: 1rem 4rem 1rem 0; }
+  main.services .process ul li:first-of-type {
+    padding: 1rem 4rem 1rem 0; } }
+
+main.about .introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  color: white; }
+  main.about .introduction h1 span {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 2;
+    text-transform: uppercase;
+    color: #c69b45; }
+
+main.about .mission {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  background: #f5f5f5; }
+  main.about .mission h2 {
+    background: #f5f5f5; }
+    main.about .mission h2 span {
+      display: block;
+      width: 100%;
+      margin: 0 0 0.25rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 0.8rem;
+      line-height: 2;
+      text-transform: uppercase;
+      color: #c69b45; }
+  main.about .mission ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: value; }
+    main.about .mission ul li {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 0 2rem;
+      font-family: "Libre Baskerville", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.333rem; }
+      main.about .mission ul li span {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 0 0.25rem; }
+      main.about .mission ul li span::before {
+        flex: 0 1 auto;
+        padding: 0 0.5rem 0 0;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 90%;
+        color: #c69b45;
+        counter-increment: value;
+        content: "0" counter(value); }
+      main.about .mission ul li span::after {
+        display: block;
+        flex: 1;
+        height: 1px;
+        background: #c4c4c4;
+        content: ""; }
+    main.about .mission ul li:last-of-type {
+      margin: 0; }
+
+main.about .team {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  background: white; }
+  main.about .team h2 span {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 2;
+    text-transform: uppercase;
+    color: #c69b45; }
+  main.about .team ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none; }
+    main.about .team ul li {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin: 0 0 1rem; }
+      main.about .team ul li figure {
+        display: grid;
+        overflow: hidden;
+        width: 25%;
+        margin: 0;
+        border-radius: 0.25rem; }
+        main.about .team ul li figure a img {
+          -webkit-transition: all 2.5s ease 0s;
+          -moz-transition: all 2.5s ease 0s;
+          -ms-transition: all 2.5s ease 0s;
+          -o-transition: all 2.5s ease 0s;
+          transition: all 2.5s ease 0s;
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+          transform: scale(1); }
+        main.about .team ul li figure a:hover img, main.about .team ul li figure a:focus img {
+          -webkit-transform: scale(1.25);
+          -moz-transform: scale(1.25);
+          -ms-transform: scale(1.25);
+          -o-transform: scale(1.25);
+          transform: scale(1.25); }
+      main.about .team ul li a .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0 0 1rem;
+        -webkit-transition: all 0.325s ease 0s;
+        -moz-transition: all 0.325s ease 0s;
+        -ms-transition: all 0.325s ease 0s;
+        -o-transition: all 0.325s ease 0s;
+        transition: all 0.325s ease 0s; }
+        main.about .team ul li a .text .who {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          width: 100%; }
+          main.about .team ul li a .text .who span.social {
+            width: 1.75rem;
+            min-width: 1.75rem;
+            height: 1.75rem;
+            margin: 0 0.25rem 0 0; }
+            main.about .team ul li a .text .who span.social svg {
+              width: 100%;
+              height: 100%;
+              -webkit-transition: all 0.325s ease 0s;
+              -moz-transition: all 0.325s ease 0s;
+              -ms-transition: all 0.325s ease 0s;
+              -o-transition: all 0.325s ease 0s;
+              transition: all 0.325s ease 0s; }
+          main.about .team ul li a .text .who span.name {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.777rem; }
+        main.about .team ul li a .text .what {
+          padding: 0 0 0 2rem;
+          font-size: 1rem;
+          text-transform: capitalize; }
+      main.about .team ul li a:hover .text, main.about .team ul li a:focus .text {
+        color: #ff5000; }
+        main.about .team ul li a:hover .text .who span.social, main.about .team ul li a:focus .text .who span.social {
+          fill: #ff5000; }
+    main.about .team ul li:last-of-type {
+      margin: 0; }
+  main.about .team article {
+    padding: 2rem 0 0; }

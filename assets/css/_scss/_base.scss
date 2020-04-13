@@ -87,18 +87,44 @@ html {
   text-rendering: optimizeLegibility;
   font-size: 100%;
   color: black;
+  background: $color-dk-blue;
   scroll-behavior: smooth;
 }
 
-body {
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+@media (min-width: 64rem) {
+  html {font-size: 120%;}
+}
+
+@media (min-width: 90rem) {
+  html {font-size: 150%;}
+}
+
+body, .body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
+  overflow-y: auto;
   margin: 0 auto;
   padding: 0;
 }
 
-main {position: relative;}
+body.open {
+  position: fixed;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+main {
+  display: block;
+//   position: relative;
+}
 
 picture {display: grid;}
 
