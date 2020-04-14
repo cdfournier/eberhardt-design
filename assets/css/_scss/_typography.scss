@@ -51,6 +51,341 @@ h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.cente
 
 h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {text-align: right;}
 
+h1 {
+  span {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem;
+    @include font-body-bold;
+    font-size: 0.8rem;
+    line-height: 2;
+    text-transform: uppercase;
+    color: $color-accen;
+  }
+}
+
+h2 {
+  span {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.5rem;
+    @include font-body-bold;
+    font-size: 0.8rem;
+    line-height: 2;
+    text-transform: uppercase;
+    color: $color-accen;
+  }
+}
+
+
+// COUNT LIST
+ul.count {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: count;
+  li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 2rem;
+    @include font-headline;
+    font-size: 1.333rem;
+    span {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 0 0.25rem;
+    }
+    span::before {
+      flex: 0 1 auto;
+      padding: 0 0.5rem 0 0;
+      @include font-body-bold;
+      font-size: 90%;
+      color: $color-accen;
+      counter-increment: count;
+      content: "0" counter(count);
+    }
+    span::after {
+      display: block;
+      flex: 1;
+      height: 1px;
+      background: $color-md-gray;
+      content: "";
+    }
+  }
+  li:last-of-type {margin: 0;}
+}
+
+@media (min-width: 48rem) {
+  ul.count {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    li {
+      width: 30%;
+      margin: 2rem 0 0;
+    }
+    li:last-of-type {margin: 2rem 0 0;}
+  }
+}
+
+
+// STEPS LIST
+ul.steps {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: steps;
+  li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    @include font-headline;
+    font-size: 1.333rem;
+  }
+  li::before {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 10;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem 0 0;
+    border: 1px solid $color-md-gray;
+    border-radius: 100%;
+    @include font-body-bold;
+    font-size: 70%;
+    color: $color-accen;
+    background: white;
+    counter-increment: steps;
+    content: "" counter(steps);
+  }
+  li::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(1rem - 1px);
+    width: 2px;
+    height: 100%;
+    background: $color-md-gray;
+    content: "";
+  }
+  li:first-of-type {padding: 0 0 1rem;}
+  li:last-of-type {padding: 1rem 0 0;}
+}
+
+@media (min-width: 48rem) {
+  ul.steps {
+    flex-direction: row;
+    justify-content: stretch;
+    li {
+      align-items: flex-start;
+      flex-direction: column;
+      width: auto;
+      padding: 0 2rem 0 0;
+    }
+    li::before {
+      margin: 0 0 1rem;
+    }
+    li::after {
+      top: 20%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
+    li:first-of-type {padding: 0 2rem 0 0;}
+    li:last-of-type {padding: 0;}
+    li:last-of-type::after {display: none;}
+  }
+}
+
+@media (min-width: 64rem) {
+  ul.steps {
+    li {padding: 0 3rem 0 0;}
+    li:first-of-type {padding: 0 3rem 0 0;}
+  }
+}
+
+@media (min-width: 90rem) {
+  ul.steps {
+    li {padding: 0 4rem 0 0;}
+    li:first-of-type {padding: 0 4rem 0 0;}
+  }
+}
+
+
+// TEAM LIST
+ul.team {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 0 1rem;
+    figure {
+      display: grid;
+      overflow: hidden;
+      width: 4.875rem;
+      height: 4.875rem;
+      margin: 0;
+      border-radius: 0.25rem;
+      a img {
+        @include transition(all, 2.5s, ease, 0s);
+        @include transform(scale(1));
+      }
+      a:hover img, a:focus img {@include transform(scale(1.25));}
+    }
+    a .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 0 0 1rem;
+      @include transition(all, 0.325s, ease, 0s);
+      .who {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        span.social {
+          width: 1.75rem;
+          min-width: 1.75rem;
+          height: 1.75rem;
+          margin: 0 0.25rem 0 0;
+          svg {
+            width: 100%;
+            height: 100%;
+            @include transition(all, 0.325s, ease, 0s);
+          }
+        }
+        span.name {
+          @include font-headline;
+          font-size: 1.777rem;
+        }
+      }
+      .what {
+        padding: 0 0 0 2rem;
+        font-size: 1rem;
+        text-transform: capitalize;
+      }
+    }
+    a:hover .text, a:focus .text {
+      color: $color-hover;
+      .who {
+        span.social {fill: $color-hover;}
+      }
+    }
+  }
+  li:last-of-type {margin: 0;}
+}
+
+@media (orientation: landscape) {
+  ul.team {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      width: 48%;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  ul.team {
+    flex-direction: row;
+    justify-content: space-between;
+    li {
+      align-items: flex-start;
+      flex-direction: column;
+      width: 30%;
+      margin: 0;
+      figure {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+      a .text {
+        align-items: flex-start;
+        padding: 0.5rem 0 0;
+        text-align: left;
+        .who {justify-content: flex-start;}
+        .what {padding: 0;}
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  ul.team li figure {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+
+/* LIST LIST */
+ul.count li > ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  li {
+    width: 100%;
+    margin: 0 0 0.75rem;
+    @include font-body;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+  li:last-of-type {margin: 0;}
+  list-style: decimal;
+}
+
+
+// DEFINITION LIST
+dl {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  dt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.333rem;
+  }
+  dd {
+    width: 100%;
+    margin: 0 0 1rem;
+    @include font-body;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  dd:last-of-type {margin: 0;}
+}
+
 
 // VISUALLY HIDDEN
 .visuallyhidden {display: none;}

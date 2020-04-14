@@ -25,12 +25,33 @@
     <link href="assets/css/styles.css" rel="stylesheet">
   </head>
   <body data-aos="fade-in">
-    <main class="home">
-      <section class="introduction">
-        <h1><span>Bespoke Design Services</span>Meet Your New Design Partner</h1>
+    <header>
+      <nav aria-labelledby="header-navigation">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="header-navigation">
+          <svg class="menu-toggle-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></svg>
+          <svg class="menu-toggle-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></svg>
+        </button>
+        <ul id="header-navigation">
+          <li>Home</li>
+          <li><a href="projects/index.html">Projects</a></li>
+          <li><a href="services/index.html">Services</a></li>
+          <li><a href="about/index.html">About</a></li>
+          <li>
+            <h2><span>Contact Us</span>Let&rsquo;s Get Started</h2>
+            <p><a href="#!" class="arrow">Hire us!<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></span></a></p>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 500"><title>Eberhardt Design logo</title><path d="M62.2 274c6.5 0 12.8 1.2 18.6 3.8 5.8 2.5 10.8 5.9 15.1 10.2 4.3 4.3 7.7 9.2 10.2 15 2.6 5.8 3.8 11.9 3.8 18.5v131.1c0 6.5-1.2 12.7-3.8 18.5-2.6 5.8-5.9 10.8-10.2 15-4.3 4.3-9.3 7.6-15.1 10.2s-12 3.8-18.6 3.8H5.3c-3.6 0-5.3-1.7-5.3-5.3V279.3c0-3.6 1.7-5.3 5.3-5.3h56.9zm3.5 49.4c0-2.5-.9-4.7-2.7-6.4-1.7-1.7-3.9-2.6-6.4-2.6H44.4v145.4h12.2c2.6 0 4.7-.9 6.4-2.6 1.7-1.7 2.7-3.9 2.7-6.4V323.4zm156.7 137.8v33.5c0 3.6-1.7 5.3-5.3 5.3h-81.5c-3.5 0-5.3-1.7-5.3-5.3V279.3c0-3.6 1.7-5.3 5.3-5.3h81.5c3.5 0 5.3 1.7 5.3 5.3v33.5c0 3.6-1.7 5.3-5.3 5.3h-42.9v43h37.2c3.5 0 5.3 1.7 5.3 5.3v33.5c0 3.6-1.7 5.3-5.3 5.3h-37.2V456h42.9c3.6-.1 5.3 1.6 5.3 5.2zm98.2-183.5c5.6 2.5 10.4 5.8 14.6 9.9 4.1 4.2 7.4 9 9.9 14.7 2.5 5.7 3.6 11.6 3.6 18.1v14c0 3.5-1.6 5.7-4.7 6.7l-33.2 8.8c-3.2 1-4.7-.2-4.7-3.7v-23.9c0-2.5-.9-4.6-2.6-6.3-1.7-1.7-3.7-2.6-6.2-2.6h-3c-2.5 0-4.5.9-6.2 2.6-1.7 1.7-2.6 3.8-2.6 6.3v22.4c.2 2.7.7 5.1 1.5 7 .7 2 2.1 4 4 5.9l47.9 36c3.9 3.5 6.4 7 7.5 10.5 1.1 3.6 1.9 7.5 2.4 12v37.5c0 6.4-1.2 12.4-3.6 18.1s-5.7 10.5-9.9 14.7-9 7.4-14.6 9.9-11.5 3.7-17.9 3.7h-13.9c-6.3 0-12.3-1.2-17.9-3.7-5.6-2.5-10.4-5.8-14.6-9.9-4.1-4.2-7.4-9-9.9-14.7-2.5-5.7-3.6-11.6-3.6-18.1V433c0-3.5 1.6-5.7 4.7-6.7l33.2-8.8c3.2-1 4.7.2 4.7 3.7v30.6c0 2.5.9 4.6 2.6 6.3 1.7 1.7 3.7 2.6 6.2 2.6h3c2.5 0 4.5-.9 6.2-2.6s2.6-3.8 2.6-6.3V429c-.2-3.2-.7-6-1.5-8.4-.7-2.5-2.2-4.7-4.3-6.7L253 377.5c-3.6-3.5-6.3-6.9-7.9-10.3-1.6-3.5-2.4-7.9-2.4-13.6v-33.2c0-6.4 1.2-12.4 3.6-18.1 2.5-5.7 5.7-10.5 9.9-14.7 4.1-4.2 9-7.4 14.6-9.9s11.5-3.7 17.9-3.7h13.9c6.5 0 12.4 1.3 18 3.7zm92.6 217c0 3.6-1.7 5.3-5.3 5.3h-33.5c-3.5 0-5.3-1.7-5.3-5.3V279.3c0-3.6 1.7-5.3 5.3-5.3h33.5c3.5 0 5.3 1.7 5.3 5.3v215.4zm98.2-217c5.6 2.5 10.5 5.8 14.6 9.9 4.1 4.2 7.4 9 9.9 14.7 2.5 5.7 3.6 11.6 3.6 18.1v8.1c0 3.5-1.6 5.7-4.7 6.6l-33.2 12.1c-3.2 1-4.7-.2-4.7-3.7v-21.3c0-2.5-.9-4.6-2.6-6.3-1.7-1.7-3.7-2.6-6.2-2.6h-3c-2.5 0-4.5.9-6.2 2.6-1.7 1.7-2.6 3.8-2.6 6.3v129.5c0 2.5.9 4.6 2.6 6.3 1.7 1.7 3.7 2.6 6.2 2.6h3c2.5 0 4.5-.9 6.2-2.6 1.7-1.7 2.6-3.8 2.6-6.3V412h-10.3v-42h47.9c3.5 0 5.1 1.7 5.1 5.2v78.4c0 6.4-1.2 12.4-3.6 18.1-2.5 5.7-5.7 10.5-9.9 14.7-4.1 4.2-9 7.4-14.6 9.9S500 500 493.6 500h-13.9c-6.3 0-12.3-1.2-17.9-3.7-5.6-2.5-10.5-5.8-14.6-9.9-4.1-4.2-7.4-9-9.9-14.7-2.5-5.7-3.6-11.6-3.6-18.1V320.4c0-6.4 1.2-12.4 3.6-18.1 2.5-5.7 5.7-10.5 9.9-14.7 4.1-4.2 9-7.4 14.6-9.9s11.5-3.7 17.9-3.7h13.9c6.2 0 12.2 1.3 17.8 3.7zm168.6 1.6v215.4c0 3.6-1.7 5.3-5.3 5.3h-24c-1.5 0-2.9-.5-4.3-1.5s-2.3-2.1-2.8-3.4l-39.7-98.3v97.9c0 3.6-1.7 5.3-5.3 5.3h-33.4c-3.5 0-5.3-1.7-5.3-5.3V279.3c0-3.6 1.7-5.3 5.3-5.3H590c1.5 0 2.9.5 4.3 1.5s2.3 2.1 2.8 3.4l39 109.6V279.3c0-3.6 1.7-5.3 5.3-5.3h33.4c3.5 0 5.2 1.7 5.2 5.3zM80 205.4v29.3c0 3.1-1.5 4.6-4.5 4.6h-71c-3.1 0-4.5-1.5-4.5-4.6V13.8c0-3.1 1.5-4.6 4.5-4.6h70.9c3.1 0 4.5 1.5 4.5 4.6v29.3c0 3.1-1.5 4.6-4.5 4.6H38.2V95h32.4c3.1 0 4.5 1.5 4.5 4.6v29.3c0 3.1-1.5 4.6-4.5 4.6H38.2v67.4h37.2c3.1-.1 4.6 1.4 4.6 4.5zm106.7-80.7c3.1 3.1 5.4 6.7 7 10.8 1.5 4.2 2.3 8.7 2.3 13.8V198c0 5.7-1.1 11-3.3 16.1-2.2 5.1-5.2 9.4-8.9 13.1-3.8 3.8-8.2 6.7-13.2 8.8-5.1 2.2-10.5 3.3-16.2 3.3h-49.8c-3.1 0-4.6-1.5-4.6-4.6V13.8c0-3.1 1.5-4.6 4.6-4.6h49.8c5.7 0 11.1 1.1 16.2 3.3 5.1 2.2 9.5 5.2 13.2 8.8 3.7 3.8 6.7 8.1 8.9 13.1 2.2 5.1 3.3 10.4 3.3 16.1v32.9c0 10.1-3.1 18.6-9.3 25.3-3.3 3.5-7.3 6.4-11.9 8.5 4.8 2 8.8 4.4 11.9 7.5zm-29.5-72.3c0-2.2-.8-4.1-2.3-5.6-1.5-1.5-3.4-2.3-5.6-2.3h-10.6v55.9h10.6c2.2 0 4.1-.8 5.6-2.3 1.5-1.5 2.3-3.4 2.3-5.6V52.4zm0 91.6c0-2.2-.8-4.1-2.3-5.6-1.5-1.5-3.4-2.3-5.6-2.3h-10.6v68h10.6c2.2 0 4.1-.8 5.6-2.3 1.5-1.5 2.3-3.4 2.3-5.6V144zM296 205.4v29.3c0 3.1-1.5 4.6-4.5 4.6h-70.9c-3.1 0-4.5-1.5-4.5-4.6V13.8c0-3.1 1.5-4.6 4.5-4.6h70.8c3.1 0 4.5 1.5 4.5 4.6v29.3c0 3.1-1.5 4.6-4.5 4.6h-37.2V95h32.4c3.1 0 4.5 1.5 4.5 4.6v29.3c0 3.1-1.5 4.6-4.5 4.6h-32.4v67.4h37.2c3-.1 4.6 1.4 4.6 4.5zm121.8 29.3c.7 3.1-.4 4.6-3.3 4.6h-29.9c-1.3 0-2.6-.4-3.8-1.3-1.2-.9-2-2-2.5-3.3l-24-80.5V236c-.7 2.2-2.2 3.3-4.6 3.3h-29.3c-3.1 0-4.6-1.5-4.6-4.6V13.8c0-3.1 1.5-4.6 4.6-4.6h49.2c5.7 0 11 1.1 16.1 3.3 5.1 2.2 9.4 5.2 13.1 8.8 3.7 3.8 6.6 8.1 8.8 13.1 2.2 5.1 3.3 10.4 3.3 16.1v53.6c0 8.1-2.1 15.4-6.3 21.8-4.2 6.5-9.6 11.4-16.4 15l29.6 93.8zm-63.4-124.2h10.5c2.2 0 4.1-.8 5.6-2.3 1.5-1.5 2.3-3.4 2.3-5.6V52.3c0-2.2-.8-4.1-2.3-5.6-1.5-1.5-3.4-2.3-5.6-2.3h-10.5v66.1zM585 91.9C620.9-11.3 432-45 438.2 83.1c6.1 125.1 6.7 156.9 6.7 156.9l155.9-1.8c128-.6 84.8-186-15.8-146.3z"></path></svg>
+      </div>
+    </header>
+    <main>
+      <section class="opening">
+        <h1><span>Bespoke Design Services</span>Your Design Partner</h1>
         <p>We help cool companies solve problems with design.</p>
       </section>
-      <section class="explore">
+      <section class="explore white">
         <h2><span>What We&rsquo;ve Done</span>Explore Our Work</h2>
         <article>
           <h3 class="visuallyhidden">Bright Bucks</h3>
@@ -52,20 +73,20 @@
             <figcaption><a href="#!"><span>Solana</span>A blockchain dashboard that is informative and easy to use.</a></figcaption>
           </figure>
         </article>
-        <p><a href="#!" class="arrow">See More<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></span></a></p>
+        <p><a href="projects/index.html" class="arrow">See More<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></span></a></p>
       </section>
-      <section class="services">
+      <section class="bg gray">
         <h2><span>What We Do</span>Services</h2>
-        <ul>
+        <ul class="count">
           <li><span></span>Design</li>
           <li><span></span>Development</li>
           <li><span></span>Product Management</li>
         </ul>
-        <p><a href="#!" class="arrow">Learn more<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></span></a></p>
+        <p><a href="services/index.html" class="arrow">Learn more<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></span></a></p>
       </section>
-      <section class="team">
-        <h2><span>Say Hello</span>Meet the Team</h2>
-        <ul>
+      <section class="bg white">
+        <h2><span>Say Hello</span>Meet Our Team</h2>
+        <ul class="team">
           <li>
             <figure>
               <a href="https://www.linkedin.com/in/dianneeberhardt" target="_blank" rel="noopener noreferrer" id="linkedin-dianne"><img src="assets/images/dianne.jpg" alt="Diane"></a>
@@ -103,7 +124,7 @@
             </div></a>
           </li>
         </ul>
-        <p><a href="#!" class="arrow">Check us out<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></span></a></p>
+        <p><a href="about/index.html" class="arrow">Check us out<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg></span></a></p>
       </section>
     </main>
     <footer>
@@ -113,6 +134,7 @@
       </section>
       <nav>
         <ul>
+          <li>Home</li>
           <li><a href="projects/index.html">Projects</a></li>
           <li><a href="services/index.html">Services</a></li>
           <li><a href="about/index.html">About</a></li>
@@ -122,7 +144,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" async></script>
-    <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/scripts/scripts.js"></script>
     <script>

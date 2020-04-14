@@ -8,7 +8,7 @@ header {
   z-index: 100;
   width: 100%;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   .logo {
     display: grid;
     position: absolute;
@@ -17,23 +17,141 @@ header {
     width: 20%;
     max-width: 3.5rem;
     @include transition (all, 0.325s, ease, 0s);
+    svg {fill: white;}
   }
   .logo.open {@include transform(translateX(-10rem));}
+  .logo a {
+    svg {
+      fill: white;
+      @include transition (all, 0.325s, ease, 0s);
+    }
+  }
+  .logo a:hover, .logo a:focus {svg {fill: $color-hover;}}
 }
 
-.header--fixed {
-  position: fixed;
-  z-index: 10;
-  right: 0;
-  left: 0;
-  top: 0
+
+// HEADER NAVIGATION
+header {
+  nav {
+    width: 100%;
+    padding: 2rem;
+    background: transparent;
+    @include transition(width, 0.325s, ease, 0s);
+    button.menu-toggle {
+      display: flex;
+      margin: 0 0 0 auto;
+      padding: 0;
+      border: none;
+      background: transparent;
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: white;
+      }
+      svg.menu-toggle-open {@include transition(width, 0.325s, ease, 0s);}
+      svg.menu-toggle-close {
+        width: 0;
+        @include transition(width, 0.325s, ease, 0s);
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      list-style-type: none;
+      @include transform(translateX(-100rem));
+      @include transition(all, 0.325s, ease, 0s);
+      li {
+        padding: 1rem 0;
+        @include font-body-bold;
+        color: $color-dk-gray;
+      }
+      li a {
+        text-decoration: none;
+        color: white;
+      }
+      li a:hover, li a:focus {color: $color-hover;}
+      li:last-child {
+        padding: 3rem 0 1rem;
+        h2 {color: white;}
+        p a.arrow {
+          font-size: 1.333rem;
+          text-transform: none;
+          color: white;
+          span {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0 0 0 0.5rem;
+            svg {fill: white;}
+          }
+        }
+      }
+      li:last-child::before {
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin: 0 0 1rem;
+        background: $color-md-gray;
+        content: "";
+      }
+    }
+  }
+  nav.open {
+    height: 100vh;
+    background: $color-dk-blue;
+    button.menu-toggle {
+      svg.menu-toggle-open {width: 0;}
+      svg.menu-toggle-close {width: 2rem;}
+    }
+    ul {
+      height: calc(100% - 2rem);
+      padding: 1rem 0;
+      @include transform(translateX(0));
+    }
+  }
 }
 
-.headroom {
-  @include transition (all, 0.325s, ease, 0s);
-  will-change: transform
+@media (orientation: landscape) {
+  header {
+    nav {
+      ul {
+        li:last-of-type {
+          position: absolute;
+          right: 0;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
 }
 
-.headroom--pinned {@include transform (translateY(0));}
-
-.headroom--unpinned {@include transform (translateY(-100%));}
+@media (min-width: 48rem) {
+  header {
+    nav {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+      position: relative;
+      button.menu-toggle {display: none;}
+      ul {
+        flex-direction: row;
+        z-index: 10;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        @include transform (translateX(0));
+        li {
+          width: auto;
+          padding: 0 0 0 2rem;
+        }
+        li:last-child {display: none;}
+      }
+    }
+  }
+}

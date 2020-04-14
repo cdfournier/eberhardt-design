@@ -1,28 +1,4 @@
-// HEADROOM
-/*
-var myElement = document.querySelector("header");
-var headroom  = new Headroom(myElement);
-headroom.init(); 
-*/
-
-// HEADER ADAPTIVE COLOR
-/*
-var stickyOffset = $("header").offset();
-var $contentDivs = $(".bg");
-$(document).scroll(function() {
-  $contentDivs.each(function(k) {
-    var _thisOffset = $(this).offset();
-    var _actPosition = _thisOffset.top - $(window).scrollTop();
-    if (_actPosition < stickyOffset.top && _actPosition + $(this).height() > 0) {
-      $("").removeClass("light dark").addClass($(this).hasClass("light") ? "light" : "dark");
-      return false;
-    }
-  });
-});
-*/
-
 // MOBILE NAVIGATION TOGGLES
-/*
 $('button.menu-toggle svg.menu-toggle-open').click(function() {
   $('nav').addClass('open');
   $('body').addClass('open');
@@ -44,4 +20,3 @@ window.onload = function() {
     $('nav ul').attr('aria-hidden',false);
   }
 };
-*/
