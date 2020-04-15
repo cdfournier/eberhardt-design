@@ -118,17 +118,255 @@ section.bg.white {background: white;}
 }
 
 
-/* PROJECT */
+/* PROJECTS */
 section.project {
+  padding: 0;
+  h2 {padding: 2rem 2rem 0;}
+  h2 + p {padding: 0.5rem 2rem 0;}
   article {
     display: flex;
     flex-direction: column;
-    padding: 1rem 0 0;
+    padding: 0;
     dl {margin: 1rem 0 0;}
-    dl:first-of-type {margin: 0;}
     figure {
       width: 100%;
       margin: 0;
     }
+  }
+  article:first-of-type {padding: 0 2rem;}
+}
+
+@media (orientation: landscape), (min-width: 48rem) {
+  section.project {
+    article {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      dl {width: calc(50% - 1rem;}
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  section.project {
+  h2 {padding: 4rem 4rem 0;}
+  h2 + p {padding: 0.5rem 4rem 0;}
+  article {
+    dl {width: calc(50% - 2rem);}
+  }
+  article:first-of-type {padding: 1rem 4rem 2rem;}
+  }
+}
+
+
+/* BRIGHT BUCKS */
+section.project.bright-bucks {
+  article.b {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0 0;
+    background: #896bdb;
+    figure {width: 50%;}
+  }
+  article.c {
+    padding: 2rem 0 0;
+    background: #32bebf;
+    figure.bb {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    figure.cc {
+      width: 70%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  article.d {
+    margin: 0;
+    padding: 0;
+    background: white;
+    figure {width: 100%;}
+  }
+}
+
+@media (orientation: landscape), (min-width: 48rem) {
+  section.project.bright-bucks {
+    article.b {
+      figure {width: 33%;}
+      figure:nth-child(2) {display: none;}
+    }
+    article.c {
+      align-items: flex-end;
+      flex-direction: row-reverse;
+      figure.bb {
+        width: 35%;
+        padding: 0 0 2rem;
+      }
+      figure.cc {width: 35%;}
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  section.project.bright-bucks {
+    article.b {padding: 2rem;}
+    article.c {
+      figure.bb {padding: 2rem 0 4rem;}
+    }
+  }
+}
+
+
+/* SOLANA */
+section.project.solana {
+  article.b {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0 0;
+    background: #009e65;
+    figure {width: 50%;}
+  }
+  article.c {
+    padding: 0;
+  }
+}
+
+@media (orientation: landscape), (min-width: 48rem) {
+  section.project.solana {
+    article.b {
+      figure {width: 33%;}
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  section.project.solana {
+    article.b {padding: 2rem;}
+  }
+}
+
+
+/* FLO RECRUIT */
+section.project.flo-recruit {
+  article.b {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0 0;
+    background: #d0204e;
+    figure.bb {
+      width: calc(100% - 4rem);
+      margin: 1rem 0 0;
+    }
+    figure.cc {
+      width: 41.475%;
+      margin: 0;
+    }
+  }
+  article.c {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 2rem 2rem 0;
+    background: #d0204e;
+    figure {width: 50%;}
+  }
+  article.d {
+    margin: 0;
+    padding: 0;
+    background: white;
+    figure {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@media (orientation: landscape), (min-width: 48rem) {
+  section.project.flo-recruit {
+    article.b {
+      align-items: center;
+      flex-direction: row;
+      figure.bb {
+        width: 60%;
+        margin: 0;
+      }
+      figure.cc {width: 33%;}
+    }
+    article.c {
+      figure {width: 33%;}
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  section.project.flo-recruit {
+    article.b, article.c {padding: 2rem;}
+  }
+}
+
+
+/* EMBELLO */
+section.project.embello {
+  article.b {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0 0;
+    background: #b56422;
+    figure.bb {
+      width: 41.475%;
+      margin: 0;
+    }
+    figure.cc {
+      width: calc(100% - 4rem);
+      margin: 1rem 0 0;
+    }
+  }
+  blockquote {
+  }
+}
+
+@media (orientation: landscape), (min-width: 48rem) {
+  section.project.embello {
+    article.b {
+      align-items: center;
+      flex-direction: row;
+      figure.bb {width: 33%;}
+      figure.cc {
+        width: 60%;
+        margin: 0;
+      }
+    }
+    blockquote {margin: 4rem 2rem;}
+  }
+}
+
+@media (min-width: 48rem) {
+  section.project.embello {
+    blockquote {
+      width: calc(100% - 8rem);
+      margin: 4rem;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  section.project.embello {
+    article.b {padding: 2rem;}
+    blockquote {
+      width: calc(100% - 12rem);
+    margin: 4rem 6rem;
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  section.project.embello {
+    blockquote {line-height: 2;}
   }
 }

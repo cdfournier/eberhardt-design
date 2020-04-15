@@ -117,6 +117,11 @@ ul.count {
       background: $color-md-gray;
       content: "";
     }
+    p {
+      padding: 0.25rem 0 0;
+      @include font-body;
+      font-size: 0.8rem;
+    }
   }
   li:last-of-type {margin: 0;}
 }
@@ -353,7 +358,7 @@ ul.count li > ul {
     width: 100%;
     margin: 0 0 0.75rem;
     @include font-body;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.25;
   }
   li:last-of-type {margin: 0;}
@@ -384,6 +389,45 @@ dl {
     line-height: 1.5;
   }
   dd:last-of-type {margin: 0;}
+}
+
+
+/* BLOCKQUOTE */
+blockquote {
+  display: block;
+  position: relative;
+  width: calc(100% - 4rem);
+  margin: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid $color-md-gray;
+  border-bottom: 1px solid $color-md-gray;
+  line-height: 1.5;
+}
+
+blockquote::before {
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: calc(50% - 2rem);
+  width: 2rem;
+  height: 2rem;
+  padding: 0 1rem;
+  text-align: center;
+  background: $color-lt-gray;
+  content: url(../images/double-quotes-l.svg);
+}
+
+blockquote::after {
+  display: block;
+  position: absolute;
+  bottom: -1rem;
+  left: calc(50% - 2rem);
+  width: 2rem;
+  height: 2rem;
+  padding: 0 1rem;
+  text-align: center;
+  background: $color-lt-gray;
+  content: url(../images/double-quotes-r.svg);
 }
 
 

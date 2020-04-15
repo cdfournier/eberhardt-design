@@ -5,6 +5,10 @@ a {
   @include transition(all, 0.325s, ease, 0s);
 }
 
+.bg.gray p a {@include font-body-bold;}
+
+.bg.gray p a:hover, .bg.gray p a:focus {color: $color-hover;}
+
 a.arrow {
   display: flex;
   flex-direction: row;
