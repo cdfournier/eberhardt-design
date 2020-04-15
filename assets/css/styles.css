@@ -763,7 +763,7 @@ section.project.bright-bucks article.d {
 @media (orientation: landscape), (min-width: 48rem) {
   section.project.bright-bucks article.b figure {
     width: 33%; }
-  section.project.bright-bucks article.b figure:nth-child(2) {
+  section.project.bright-bucks article.b figure.drop {
     display: none; }
   section.project.bright-bucks article.c {
     align-items: flex-end;

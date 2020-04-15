@@ -195,7 +195,7 @@ section.project.bright-bucks {
   section.project.bright-bucks {
     article.b {
       figure {width: 33%;}
-      figure:nth-child(2) {display: none;}
+      figure.drop {display: none;}
     }
     article.c {
       align-items: flex-end;
