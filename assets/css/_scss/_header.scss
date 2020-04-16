@@ -26,7 +26,7 @@ header {
       @include transition (all, 0.325s, ease, 0s);
     }
   }
-  .logo a:hover, .logo a:focus {svg {fill: $color-hover;}}
+  .logo a:hover, .logo a:focus {svg {fill: $color-dk-gray;}}
 }
 
 
@@ -73,7 +73,7 @@ header {
         text-decoration: none;
         color: white;
       }
-      li a:hover, li a:focus {color: $color-hover;}
+      li a:hover, li a:focus {color: $color-dk-gray;}
       li:last-child {
         padding: 3rem 0 1rem;
         h2 {color: white;}
@@ -94,14 +94,14 @@ header {
         width: 100%;
         height: 1px;
         margin: 0 0 1rem;
-        background: $color-md-gray;
+        background: white;
         content: "";
       }
     }
   }
   nav.open {
     height: 100vh;
-    background: $color-dk-blue;
+    background: $color-base;
     button.menu-toggle {
       svg.menu-toggle-open {width: 0;}
       svg.menu-toggle-close {width: 2rem;}
@@ -152,6 +152,14 @@ header {
         }
         li:last-child {display: none;}
       }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  header {
+    nav {
+      ul {font-size: 0.8rem;}
     }
   }
 }

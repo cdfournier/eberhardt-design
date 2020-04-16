@@ -15,7 +15,7 @@ html {
   text-rendering: optimizeLegibility;
   font-size: 100%;
   color: black;
-  background: #1b1e2e;
+  background: #80014f;
   scroll-behavior: smooth; }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -366,9 +366,9 @@ ul.team {
         font-size: 1rem;
         text-transform: capitalize; }
     ul.team li a:hover .text, ul.team li a:focus .text {
-      color: #ff5000; }
+      color: #80014f; }
       ul.team li a:hover .text .who span.social, ul.team li a:focus .text .who span.social {
-        fill: #ff5000; }
+        fill: #80014f; }
   ul.team li:last-of-type {
     margin: 0; }
 
@@ -502,7 +502,7 @@ a {
   font-style: normal; }
 
 .bg.gray p a:hover, .bg.gray p a:focus {
-  color: #ff5000; }
+  color: #80014f; }
 
 a.arrow {
   display: flex;
@@ -532,10 +532,10 @@ a.arrow {
       height: 100%; }
 
 a.arrow:hover, a.arrow:focus {
-  color: #ff5000; }
+  color: #80014f; }
   a.arrow:hover span, a.arrow:focus span {
     margin: 0 0 0 0.5rem;
-    fill: #ff5000; }
+    fill: #80014f; }
 
 button, .button {
   display: inline-flex;
@@ -664,7 +664,7 @@ section.bg.white {
         -o-transition: all 0.325s ease 0s;
         transition: all 0.325s ease 0s; }
       .explore article figure figcaption a:hover, .explore article figure figcaption a:focus {
-        color: #ff5000; }
+        color: #80014f; }
     .explore article figure::after {
       display: block;
       width: 100%;
@@ -929,7 +929,7 @@ header {
     -o-transition: all 0.325s ease 0s;
     transition: all 0.325s ease 0s; }
   header .logo a:hover svg, header .logo a:focus svg {
-    fill: #ff5000; }
+    fill: #939393; }
 
 header nav {
   width: 100%;
@@ -991,7 +991,7 @@ header nav {
       text-decoration: none;
       color: white; }
     header nav ul li a:hover, header nav ul li a:focus {
-      color: #ff5000; }
+      color: #939393; }
     header nav ul li:last-child {
       padding: 3rem 0 1rem; }
       header nav ul li:last-child h2 {
@@ -1011,12 +1011,12 @@ header nav {
       width: 100%;
       height: 1px;
       margin: 0 0 1rem;
-      background: #c4c4c4;
+      background: white;
       content: ""; }
 
 header nav.open {
   height: 100vh;
-  background: #1b1e2e; }
+  background: #80014f; }
   header nav.open button.menu-toggle svg.menu-toggle-open {
     width: 0; }
   header nav.open button.menu-toggle svg.menu-toggle-close {
@@ -1064,6 +1064,10 @@ header nav.open {
       header nav ul li:last-child {
         display: none; } }
 
+@media (min-width: 64rem) {
+  header nav ul {
+    font-size: 0.8rem; } }
+
 footer {
   display: flex;
   align-items: center;
@@ -1091,8 +1095,10 @@ footer {
       color: #c69b45; }
     footer .contact p a.arrow svg {
       fill: white; }
-    footer .contact p a.arrow:hover svg, footer .contact p a.arrow:focus svg {
-      fill: #ff5000; }
+    footer .contact p a.arrow:hover, footer .contact p a.arrow:focus {
+      color: #939393; }
+      footer .contact p a.arrow:hover svg, footer .contact p a.arrow:focus svg {
+        fill: #939393; }
   footer p.copyright {
     padding: 1rem 0 0;
     font-size: 0.8rem;
@@ -1130,7 +1136,7 @@ footer nav {
     footer nav ul li a {
       color: white; }
     footer nav ul li a:hover, footer nav ul li a:focus {
-      color: #ff5000; }
+      color: #939393; }
 
 @media (orientation: landscape) {
   footer {
@@ -1150,4 +1156,6 @@ footer nav {
 
 @media (min-width: 64rem) {
   footer {
-    padding: 4rem; } }
+    padding: 4rem; }
+    footer p.copyright {
+      font-size: 0.69rem; } }

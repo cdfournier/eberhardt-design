@@ -4,14 +4,7 @@ $color-dk-gray: #939393;
 $color-md-gray: #c4c4c4;
 $color-lt-gray: #f5f5f5;
 
-$color-mf-nor: #491019;
-$color-mf-hov: #7d5e61;
-$color-mf-acc: #773423;
-
-$color-ib-nor: #900009;
-$color-ib-hov: #420606;
-
-$color-hover: #ff5000;
+$color-base: #80014f;
 $color-accen: #c69b45;
 
 $color-embello: #b56422;
@@ -87,7 +80,7 @@ html {
   text-rendering: optimizeLegibility;
   font-size: 100%;
   color: black;
-  background: $color-dk-blue;
+  background: $color-base;
   scroll-behavior: smooth;
 }
 

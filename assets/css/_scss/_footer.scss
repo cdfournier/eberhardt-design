@@ -29,7 +29,8 @@ footer {
       svg {fill: white;}
     }
     p a.arrow:hover, p a.arrow:focus {
-      svg {fill: $color-hover;}
+      color: $color-dk-gray;
+      svg {fill: $color-dk-gray;}
     }
   }
   p.copyright {
@@ -74,7 +75,7 @@ footer {
       color: $color-dk-gray;
     }
     li a {color: white;}
-    li a:hover, li a:focus {color: $color-hover;}
+    li a:hover, li a:focus {color: $color-dk-gray;}
   }
 }
 }
@@ -103,4 +104,9 @@ footer {
   }
 }
 
-@media (min-width: 64rem) {footer {padding: 4rem;}}
+@media (min-width: 64rem) {
+  footer {
+    padding: 4rem;
+    p.copyright {font-size: 0.69rem;}
+  }
+}

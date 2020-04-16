@@ -295,9 +295,9 @@ ul.team {
       }
     }
     a:hover .text, a:focus .text {
-      color: $color-hover;
+      color: $color-base;
       .who {
-        span.social {fill: $color-hover;}
+        span.social {fill: $color-base;}
       }
     }
   }

@@ -82,7 +82,7 @@ section.bg.white {background: white;}
         line-height: 1.5;
         @include transition(all, 0.325s, ease, 0s);
       }
-      figcaption a:hover, figcaption a:focus {color: $color-hover;}
+      figcaption a:hover, figcaption a:focus {color: $color-base;}
     }
     figure::after {
       display: block;
