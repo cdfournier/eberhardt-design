@@ -51,20 +51,7 @@ h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.cente
 
 h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {text-align: right;}
 
-h1 {
-  span {
-    display: block;
-    width: 100%;
-    margin: 0 0 1rem;
-    @include font-body-bold;
-    font-size: 0.8rem;
-    line-height: 2;
-    text-transform: uppercase;
-    color: $color-accen;
-  }
-}
-
-h2 {
+h1, h2 {
   span {
     display: block;
     width: 100%;
@@ -295,9 +282,9 @@ ul.team {
       }
     }
     a:hover .text, a:focus .text {
-      color: $color-base;
+      color: $color-accen;
       .who {
-        span.social {fill: $color-base;}
+        span.social {fill: $color-accen;}
       }
     }
   }

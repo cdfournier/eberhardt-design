@@ -6,13 +6,13 @@ footer {
   width: 100%;
   margin: 0;
   padding: 2rem;
-  color: white;
+  color: black;
   .contact {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0 0 2rem;
-    color: white;
+    color: black;
     h2 {
       span {
         display: block;
@@ -26,11 +26,15 @@ footer {
       }
     }
     p a.arrow {
-      svg {fill: white;}
+      svg {
+        fill: black;
+      }
     }
     p a.arrow:hover, p a.arrow:focus {
-      color: $color-dk-gray;
-      svg {fill: $color-dk-gray;}
+      color: $color-accen;
+      svg {
+        fill: $color-accen;
+      }
     }
   }
   p.copyright {
@@ -69,13 +73,17 @@ footer {
     font-size: 0.8rem;
     line-height: 1.5;
     list-style-type: none;
-    color: white;
+    color: $color-accen;
     li {
       padding: 0 0.5rem;
-      color: $color-dk-gray;
+      color: $color-accen;
     }
-    li a {color: white;}
-    li a:hover, li a:focus {color: $color-dk-gray;}
+    li a {
+      color: black;
+    }
+    li a:hover, li a:focus {
+      color: $color-accen;
+    }
   }
 }
 }

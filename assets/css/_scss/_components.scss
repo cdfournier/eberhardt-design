@@ -6,7 +6,9 @@
     width: 100%;
     min-height: 100vh;
     padding: 2rem;
-    color: white;
+    color: black;
+    background: $color-base;
+    h1 span {color: inherit;}
 }
 
 @media (min-width: 64rem) {
@@ -82,7 +84,7 @@ section.bg.white {background: white;}
         line-height: 1.5;
         @include transition(all, 0.325s, ease, 0s);
       }
-      figcaption a:hover, figcaption a:focus {color: $color-base;}
+      figcaption a:hover, figcaption a:focus {color: $color-accen;}
     }
     figure::after {
       display: block;
@@ -326,8 +328,6 @@ section.project.embello {
       width: calc(100% - 4rem);
       margin: 1rem 0 0;
     }
-  }
-  blockquote {
   }
 }
 

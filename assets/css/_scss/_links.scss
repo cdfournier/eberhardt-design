@@ -7,7 +7,7 @@ a {
 
 .bg.gray p a {@include font-body-bold;}
 
-.bg.gray p a:hover, .bg.gray p a:focus {color: $color-base;}
+.bg.gray p a:hover, .bg.gray p a:focus {color: $color-accen;}
 
 a.arrow {
   display: flex;
@@ -34,9 +34,9 @@ a.arrow {
 }
 
 a.arrow:hover, a.arrow:focus {
-  color: $color-base;
+  color: $color-accen;
   span {
     margin: 0 0 0 0.5rem;
-    fill: $color-base;
+    fill: $color-accen;
   }
 }

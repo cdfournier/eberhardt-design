@@ -4,7 +4,9 @@ $color-dk-gray: #939393;
 $color-md-gray: #c4c4c4;
 $color-lt-gray: #f5f5f5;
 
-$color-base: #80014f;
+
+$color-base: #ffe151;
+$color-base-active: $color-dk-gray;
 $color-accen: #c69b45;
 
 $color-embello: #b56422;
@@ -80,7 +82,7 @@ html {
   text-rendering: optimizeLegibility;
   font-size: 100%;
   color: black;
-  background: $color-base;
+  background: white;
   scroll-behavior: smooth;
 }
 
@@ -116,7 +118,6 @@ body.open {
 
 main {
   display: block;
-//   position: relative;
 }
 
 picture {display: grid;}
