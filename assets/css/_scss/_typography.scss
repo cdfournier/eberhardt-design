@@ -113,7 +113,7 @@ ul.count {
   li:last-of-type {margin: 0;}
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   ul.count {
     flex-direction: row;
     flex-wrap: wrap;
@@ -182,7 +182,7 @@ ul.steps {
   li:last-of-type {padding: 1rem 0 0;}
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   ul.steps {
     flex-direction: row;
     justify-content: stretch;
@@ -207,14 +207,14 @@ ul.steps {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   ul.steps {
     li {padding: 0 3rem 0 0;}
     li:first-of-type {padding: 0 3rem 0 0;}
   }
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 88rem) {
   ul.steps {
     li {padding: 0 4rem 0 0;}
     li:first-of-type {padding: 0 4rem 0 0;}
@@ -302,7 +302,7 @@ ul.team {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   ul.team {
     flex-direction: row;
     justify-content: space-between;
@@ -326,7 +326,7 @@ ul.team {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   ul.team li figure {
     width: 4.5rem;
     height: 4.5rem;

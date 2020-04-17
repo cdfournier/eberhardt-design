@@ -22,11 +22,11 @@ html {
   html {
     scroll-behavior: auto; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   html {
     font-size: 120%; } }
 
-@media (min-width: 90rem) {
+@media (min-width: 88rem) {
   html {
     font-size: 150%; } }
 
@@ -178,7 +178,7 @@ ul.count {
   ul.count li:last-of-type {
     margin: 0; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   ul.count {
     flex-direction: row;
     flex-wrap: wrap;
@@ -245,7 +245,7 @@ ul.steps {
   ul.steps li:last-of-type {
     padding: 1rem 0 0; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   ul.steps {
     flex-direction: row;
     justify-content: stretch; }
@@ -268,13 +268,13 @@ ul.steps {
     ul.steps li:last-of-type::after {
       display: none; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   ul.steps li {
     padding: 0 3rem 0 0; }
   ul.steps li:first-of-type {
     padding: 0 3rem 0 0; } }
 
-@media (min-width: 90rem) {
+@media (min-width: 88rem) {
   ul.steps li {
     padding: 0 4rem 0 0; }
   ul.steps li:first-of-type {
@@ -368,7 +368,7 @@ ul.team {
     ul.team li {
       width: 48%; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   ul.team {
     flex-direction: row;
     justify-content: space-between; }
@@ -389,7 +389,7 @@ ul.team {
         ul.team li a .text .what {
           padding: 0; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   ul.team li figure {
     width: 4.5rem;
     height: 4.5rem; } }
@@ -571,7 +571,7 @@ button:hover, button:focus,
   .opening h1 span {
     color: inherit; }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   .opening {
     padding: 4rem; } }
 
@@ -590,7 +590,7 @@ section.bg.gray {
 section.bg.white {
   background: white; }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   section {
     padding: 4rem; } }
 
@@ -666,7 +666,7 @@ section.bg.white {
   .explore article:last-of-type figure:after {
     display: none; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   .explore {
     flex-direction: row;
     flex-wrap: wrap;
@@ -681,7 +681,7 @@ section.bg.white {
     .explore article:last-of-type {
       padding: 0 0 0 1rem; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   .explore {
     padding: 4rem; } }
 
@@ -704,7 +704,7 @@ section.project {
   section.project article:first-of-type {
     padding: 0 2rem; }
 
-@media (orientation: landscape), (min-width: 48rem) {
+@media (orientation: landscape), (min-width: 46rem) {
   section.project article {
     flex-direction: row;
     flex-wrap: wrap;
@@ -712,7 +712,7 @@ section.project {
     section.project article dl {
       width: calc(50% - 1rem); } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   section.project h2 {
     padding: 4rem 4rem 0; }
   section.project h2 + p {
@@ -751,7 +751,7 @@ section.project.bright-bucks article.d {
   section.project.bright-bucks article.d figure {
     width: 100%; }
 
-@media (orientation: landscape), (min-width: 48rem) {
+@media (orientation: landscape), (min-width: 46rem) {
   section.project.bright-bucks article.b figure {
     width: 33%; }
   section.project.bright-bucks article.b figure.drop {
@@ -765,7 +765,7 @@ section.project.bright-bucks article.d {
     section.project.bright-bucks article.c figure.cc {
       width: 35%; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   section.project.bright-bucks article.b {
     padding: 2rem; }
   section.project.bright-bucks article.c figure.bb {
@@ -784,11 +784,11 @@ section.project.solana article.b {
 section.project.solana article.c {
   padding: 0; }
 
-@media (orientation: landscape), (min-width: 48rem) {
+@media (orientation: landscape), (min-width: 46rem) {
   section.project.solana article.b figure {
     width: 33%; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   section.project.solana article.b {
     padding: 2rem; } }
 
@@ -824,7 +824,7 @@ section.project.flo-recruit article.d {
     width: 100%;
     margin: 0; }
 
-@media (orientation: landscape), (min-width: 48rem) {
+@media (orientation: landscape), (min-width: 46rem) {
   section.project.flo-recruit article.b {
     align-items: center;
     flex-direction: row; }
@@ -836,7 +836,7 @@ section.project.flo-recruit article.d {
   section.project.flo-recruit article.c figure {
     width: 33%; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   section.project.flo-recruit article.b, section.project.flo-recruit article.c {
     padding: 2rem; } }
 
@@ -854,7 +854,19 @@ section.project.embello article.b {
     width: calc(100% - 4rem);
     margin: 1rem 0 0; }
 
-@media (orientation: landscape), (min-width: 48rem) {
+section.project.embello article.c {
+  padding: 0 0 1rem;
+  background: #b56422; }
+  section.project.embello article.c blockquote {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white; }
+  section.project.embello article.c blockquote::before {
+    background: #b56422; }
+  section.project.embello article.c blockquote::after {
+    background: #b56422; }
+
+@media (orientation: landscape), (min-width: 46rem) {
   section.project.embello article.b {
     align-items: center;
     flex-direction: row; }
@@ -863,23 +875,25 @@ section.project.embello article.b {
     section.project.embello article.b figure.cc {
       width: 60%;
       margin: 0; }
-  section.project.embello blockquote {
+  section.project.embello article.c blockquote {
     margin: 4rem 2rem; } }
 
-@media (min-width: 48rem) {
-  section.project.embello blockquote {
+@media (min-width: 46rem) {
+  section.project.embello article.c blockquote {
     width: calc(100% - 8rem);
     margin: 4rem; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   section.project.embello article.b {
     padding: 2rem; }
-  section.project.embello blockquote {
-    width: calc(100% - 12rem);
-    margin: 4rem 6rem; } }
+  section.project.embello article.c {
+    padding: 0 0 2rem; }
+    section.project.embello article.c blockquote {
+      width: calc(100% - 12rem);
+      margin: 4rem 6rem; } }
 
-@media (min-width: 90rem) {
-  section.project.embello blockquote {
+@media (min-width: 88rem) {
+  section.project.embello article.c blockquote {
     line-height: 2; } }
 
 header {
@@ -1029,7 +1043,7 @@ header nav.open {
     right: 0;
     padding: 1rem 0; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   header nav {
     display: flex;
     align-items: center;
@@ -1057,7 +1071,7 @@ header nav.open {
       header nav ul li:last-child {
         display: none; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   header nav ul {
     font-size: 0.8rem; } }
 
@@ -1101,7 +1115,7 @@ footer {
   footer p.copyright {
     text-align: left; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   footer p.copyright {
     text-align: left; } }
 
@@ -1139,7 +1153,7 @@ footer nav {
       footer nav ul li {
         padding: 0 1rem 0 0; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   footer {
     align-items: flex-start; }
     footer nav ul {
@@ -1147,7 +1161,7 @@ footer nav {
       footer nav ul li {
         padding: 0 1rem 0 0; } }
 
-@media (min-width: 64rem) {
+@media (min-width: 62rem) {
   footer {
     padding: 4rem; }
     footer p.copyright {
