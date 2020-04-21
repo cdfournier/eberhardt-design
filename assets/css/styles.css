@@ -503,7 +503,6 @@ a.arrow {
   font-style: normal;
   line-height: 1;
   text-decoration: none;
-  text-transform: uppercase;
   color: inherit; }
   a.arrow span {
     display: grid;
